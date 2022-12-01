@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import styles from "./login.module.css";
 import Button from '../UI/Button'
 import {Formik,Form,Field} from 'formik'
@@ -27,7 +27,7 @@ const Login = (props) => {
     })
 
   let navigate=useNavigate()
-  let location=useLocation()
+  
 
   // const emailChangeHandle = e =>  setEmailValue(e.target.value)
   // const passwordChangeHandle = e =>  setPassvalue(e.target.value);
@@ -37,7 +37,7 @@ const Login = (props) => {
   
     // setEmailValue("");
     // setPassvalue("");
-    if (e.email == "sandipmondal00@gmail.com" && e.password == "password") {
+    if (e.email === "sandipmondal00@gmail.com" && e.password === "password") {
       navigate('/',true)
 
     }else{
