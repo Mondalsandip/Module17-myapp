@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Login from './Components/login'
+
+import Todo from './todocomponent/todo'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+import Home from './Components/Home'
+import NotFound from './Components/NotFound';
 
 function App() {
+  const [showcomponent, setShowComponent] = useState(true)
+
+
+  const updateValue = () => {
+    setShowComponent(false)
+
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      {/* { showcomponent && <Login   onChangeValue={updateValue} />  }
+      {!showcomponent && <Todo />  }   */}
+    
+      <Routes >
+        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/*' element={<NotFound />} />
+      </Routes>
+    </>
+
   );
 }
 

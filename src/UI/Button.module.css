@@ -1,0 +1,24 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button_login{
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid blue;
+    cursor: pointer;
+}
+
+.button_logout{
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    border: 2px solid rgb(245, 4, 20);
+    cursor: pointer;
+}
